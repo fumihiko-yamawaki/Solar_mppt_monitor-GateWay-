@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Solar MPPT Monitor v1.00</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="bg-solar">
+  <div class="bg-overlay"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-title">Solar MPPT Monitor</div>
+      <div class="brand-sub">v1.00.1</div>
+    </div>
+
+    <nav class="actions">
+      <a class="btn btn-ghost" href="./graph.html">グラフ</a>
+      <button class="btn btn-ghost" id="recipientsBtn">通知先</button>
+      <button class="btn btn-primary" id="exportBtn">データ出力</button>
+      <button class="btn btn-ghost" id="reloadBtn">更新</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="grid" id="cards"></section>
+
+    <footer class="foot">
+      <div class="hint">※ OFFLINE判定は watchdog.php の offline_grace_sec に依存</div>
+    </footer>
+  </main>
+
+  <!-- recipients modal -->
+  <div class="modal" id="recipientsModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div class="modal-title">通知先メール（登録制）</div>
+        <button class="iconbtn" data-close="#recipientsModal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+          <input id="emailInput" class="input" placeholder="追加するメールアドレス" />
+          <button class="btn btn-primary" id="emailAddBtn">追加</button>
+        </div>
+
+        <div id="emailList" class="list"></div>
+        <div class="msg" id="recipientsMsg"></div>
+      </div>
+
+      <div class="modal-foot">
+        <button class="btn btn-ghost" data-close="#recipientsModal">閉じる</button>
+        <button class="btn btn-primary" id="emailSaveBtn">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- export modal -->
+  <div class="modal" id="exportModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div class="modal-title">記録データ出力（CSV）</div>
+        <button class="iconbtn" data-close="#exportModal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+          <label class="label">Device
+            <select id="exportDev" class="input"></select>
+          </label>
+          <label class="label">From
+            <input id="exportFrom" class="input" type="date" />
+          </label>
+          <label class="label">To
+            <input id="exportTo" class="input" type="date" />
+          </label>
+        </div>
+
+        <div class="msg" id="exportMsg"></div>
+
+        <div class="row">
+          <a class="btn btn-primary" id="exportDl" href="#" download>CSVダウンロード</a>
+          <button class="btn btn-ghost" id="exportTodayBtn">今日</button>
+          <button class="btn btn-ghost" id="export7dBtn">7日</button>
+          <button class="btn btn-ghost" id="export30dBtn">30日</button>
+        </div>
+      </div>
+
+      <div class="modal-foot">
+        <button class="btn btn-ghost" data-close="#exportModal">閉じる</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

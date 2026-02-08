@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Solar MPPT Monitor - Graph</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-solar">
+  <div class="bg-overlay"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-title">Solar MPPT Monitor</div>
+      <div class="brand-sub">Graph</div>
+    </div>
+
+    <nav class="actions">
+      <a class="btn btn-ghost" href="./index.html">一覧</a>
+      <button class="btn btn-ghost" id="reloadBtn">再読込</button>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="card ok">
+      <div class="row">
+        <label class="label">Device
+          <select id="devSel" class="input"></select>
+        </label>
+
+        <label class="label">Month
+          <input id="ymSel" class="input" type="month">
+        </label>
+
+        <button class="btn btn-ghost" id="range24h">24時間</button>
+        <button class="btn btn-ghost" id="range3d">3日</button>
+        <button class="btn btn-ghost" id="range7d">7日</button>
+        <button class="btn btn-ghost" id="range30d">30日</button>
+
+        <button class="btn btn-primary" id="loadBtn">表示</button>
+      </div>
+
+      <canvas id="chart" height="120"></canvas>
+      <div class="msg" id="msg"></div>
+    </section>
+  </main>
+
+  <script src="./graph.js"></script>
+</body>
+</html>

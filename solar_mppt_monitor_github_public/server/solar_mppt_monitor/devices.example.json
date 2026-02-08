@@ -1,0 +1,34 @@
+{
+  "schema": "solar_mppt_monitor_v1",
+  "timezone": "Asia/Tokyo",
+  "devices": [
+    {
+      "id": "SOLAR_SITE01",
+      "name": "天体観測所/ESP32",
+      "secret": "CHANGE_ME_SITE01_LONG_RANDOM",
+      "interval_sec_expected": 300,
+      "offline_grace_sec": 900
+    },
+    {
+      "id": "SOLAR_SITE02",
+      "name": "開発機/T-SIM7080G-S3",
+      "secret": "CHANGE_ME_SITE02_LONG_RANDOM",
+      "interval_sec_expected": 300,
+      "offline_grace_sec": 900
+    },
+    {
+      "id": "SOLAR_SITE03",
+      "name": "SOLAR_SITE03",
+      "secret": "CHANGE_ME_SITE03_LONG_RANDOM",
+      "interval_sec_expected": 300,
+      "offline_grace_sec": 900
+    },
+    {
+      "id": "SOLAR_SITE04",
+      "name": "SOLAR_SITE04",
+      "secret": "CHANGE_ME_SITE04_LONG_RANDOM",
+      "interval_sec_expected": 300,
+      "offline_grace_sec": 900
+    }
+  ]
+}
