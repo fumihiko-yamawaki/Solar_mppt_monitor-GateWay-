@@ -73,8 +73,6 @@ LTE
 
 にコピーして値を設定してください。
 
-`.gitignore` により `config.h` 等は GitHub に登録されません。
-
 ---
 
 # 🔌 配線（概要）
@@ -183,7 +181,6 @@ cp alert_recipients.example.json alert_recipients.json
 
 📜 ライセンス
 本プロジェクトは OSS として公開されます。
-LICENSE ファイルを追加してください（MIT / Apache-2.0 推奨）。
 
 🤝 貢献
 Issue / Pull Request 歓迎します。
