@@ -1,8 +1,0 @@
-Choose a license and add a `LICENSE` file.
-
-Common choices:
-- MIT (permissive)
-- Apache-2.0 (permissive + patent terms)
-- GPL-3.0 (copyleft)
-
-GitHub UI: Add file -> Create new file -> LICENSE (or use "Choose a license template").
