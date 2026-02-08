@@ -1,4 +1,4 @@
-# Solar MPPT Monitor Gateway (Renogy Rover + ESP32 + LTE)
+# Solar MPPT Monitor Gateway (Renogy Rover + ESP32 + LTE-M)
 
 ESP32 と LTE-M モデムを用いて  
 Renogy Rover MPPT チャージコントローラから RS485(Modbus RTU) でデータを取得し、  
@@ -147,6 +147,7 @@ graph TD
   Q --> V
   V --> X["DeepSleep 10min"]
   X --> A
+```
 
 🛠️ ビルド手順（ファーム）
 
